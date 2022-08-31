@@ -1,6 +1,6 @@
 <?php
 
-include_once("cone.php");
+include("cone.php");
 
 $sql = "INSERT INTO viagem(Modelo,Placa,Nome,LocaldeOrigem,LocaldeDestino,KM,LitrosGastos,ValorGasolina)
 values (:Modelo,:Placa,:Nome,:LocaldeOrigem,:LocaldeDestino,:KM,:LitrosGastos,:ValorGasolina)";
@@ -15,7 +15,5 @@ $data->execute(array(
     "LocaldeDestino"=>$_POST['destino'],"ValorGasolina"=>$_POST['valor']
 
 ));
-
-    header("list.php");
 
 ?>

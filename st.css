@@ -1,0 +1,9 @@
+.sexo ,td,tr{
+
+    border: solid black 1px;
+    border-collapse: collapse;
+
+}
+td{
+    padding: 5px;
+}

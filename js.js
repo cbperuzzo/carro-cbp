@@ -1,13 +1,12 @@
 $(document).ready(function(){
 
     $("#gravar").click(function(){
-        console.log("foi");
+
         let xht = new XMLHttpRequest();
-        console.log(xht);
 
         xht.onload = function(){
 
-            $("#resp").text(this.responseText);
+            $("#resp").html(this.responseText);
 
         }
 
@@ -27,4 +26,19 @@ $(document).ready(function(){
 
     });
 
+    
+
 });
+
+function ngc(){
+
+    let tablis = new XMLHttpRequest();
+    tablis.onload = function(){
+
+        $("#listab").html(this.responseText);
+
+    }
+    tablis.open("GET","list.php");
+    tablis.send();
+
+}
